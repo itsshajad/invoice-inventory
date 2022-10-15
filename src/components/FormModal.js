@@ -1,15 +1,15 @@
-import React from 'react';
-import { useState } from 'react';
-import { Modal, Form, Button } from 'react-bootstrap';
+import React from "react";
+import { useState } from "react";
+import { Modal, Form, Button } from "react-bootstrap";
 
 const FormModal = (props) => {
   const { items, setItems } = props;
 
   const [formData, setFormData] = useState({
     id: 1,
-    name: '',
-    rate: '',
-    quantity: '',
+    name: "",
+    rate: "",
+    quantity: "",
     discount: 2,
     taxes: 10,
   });
@@ -45,9 +45,7 @@ const FormModal = (props) => {
 
     setItems(invoiceItem);
 
-    console.log(invoiceItem);
-
-    localStorage.setItem('items', JSON.stringify(invoiceItem));
+    localStorage.setItem("items", JSON.stringify(invoiceItem));
   };
 
   return (
@@ -60,7 +58,7 @@ const FormModal = (props) => {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-lg">
-          {' '}
+          {" "}
           <h5>Invoice</h5>
         </Modal.Title>
       </Modal.Header>
@@ -130,7 +128,7 @@ const FormModal = (props) => {
               disabled
               placeholder="Discount Amount"
             />
-          </Form.Group>{' '}
+          </Form.Group>{" "}
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Final Basic Cost</Form.Label>
             <Form.Control

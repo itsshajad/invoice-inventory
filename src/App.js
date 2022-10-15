@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
-import { Table } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
-import FormModal from './components/FormModal';
-import TotalComponent from './components/TotalComponent';
+import React, { useState } from "react";
+import { Table } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
+import FormModal from "./components/FormModal";
+import TotalComponent from "./components/TotalComponent";
 
 function App() {
   const [modalShow, setModalShow] = useState(false);
 
-  const localstorageItem = JSON.parse(localStorage.getItem('items'));
-
-  console.log(localstorageItem);
+  const localstorageItem = JSON.parse(localStorage.getItem("items"));
 
   const [items, setItems] = useState(
     localstorageItem == null ? [] : localstorageItem
@@ -18,6 +16,8 @@ function App() {
   const handleDelete = (id) => {
     const updateItems = items.filter((items) => items.id !== id);
     setItems(updateItems);
+
+    localStorage.setItem("items", JSON.stringify(updateItems));
   };
 
   return (
@@ -31,7 +31,7 @@ function App() {
                 className="pointer blue-table align-center"
                 onClick={() => setModalShow(true)}
               >
-                {' '}
+                {" "}
                 Add New Item
               </th>
             </tr>
@@ -83,16 +83,16 @@ function App() {
 export default App;
 
 const tableHeading = [
-  '#',
-  'Name',
-  'Rate',
-  'Quantity',
-  'Basic Cost',
-  'Discount (%)',
-  'Discount Amt',
-  'Final Basic Cost',
-  'Taxes %',
-  'Tax Amt',
-  'Total Cost',
-  'Tools',
+  "#",
+  "Name",
+  "Rate",
+  "Quantity",
+  "Basic Cost",
+  "Discount (%)",
+  "Discount Amt",
+  "Final Basic Cost",
+  "Taxes %",
+  "Tax Amt",
+  "Total Cost",
+  "Tools",
 ];
