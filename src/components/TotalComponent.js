@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const TotalComponent = ({ items }) => {
   const total_basic_cost = items.reduce((a, b) => a + b.basic_cost, 0);
@@ -19,35 +19,26 @@ const TotalComponent = ({ items }) => {
       </tr>
       <tr>
         <th colSpan={9} />
-        <th className={'grey-table'}> Total Discount</th>
-        <th className={'grey-table'}>{total_dicount}</th>
+        <th className={"grey-table"}> Total Discount</th>
+        <th className={"grey-table"}>{total_dicount}</th>
       </tr>
       <tr>
         <th colSpan={9} />
-        <th className={'grey-table'}> Total Final Baisc Cost</th>
-        <th className={'grey-table'}>{total_final_basic_cost}</th>
+        <th className={"grey-table"}> Total Final Baisc Cost</th>
+        <th className={"grey-table"}>{total_final_basic_cost}</th>
       </tr>
       <tr>
         <th colSpan={9} />
-        <th className={'grey-table'}>Total Tax</th>
-        <th className={'grey-table'}>{total_tax}</th>
+        <th className={"grey-table"}>Total Tax</th>
+        <th className={"grey-table"}>{total_tax}</th>
       </tr>
       <tr>
         <th colSpan={9} />
-        <th className={'grey-table'}>Total Price</th>
-        <th className={'grey-table'}>{final_price}</th>
+        <th className={"grey-table"}>Total Price</th>
+        <th className={"grey-table"}>{final_price}</th>
       </tr>
       <tr>
         <th></th>
-      </tr>
-      <tr>
-        <th colSpan={10} />
-        <th
-          className="blue-table align-center pointer"
-          onClick={() => alert('data saved')}
-        >
-          SAVE
-        </th>
       </tr>
     </thead>
   );

@@ -56,7 +56,7 @@ function App() {
                 <th className="grey-table">{items.final_basic_cost}</th>
                 <th className="light-grey-table">{items.taxes}</th>
                 <th className="grey-table">{items.tax_amt}</th>
-                <th className="grey-table">{items.total_cost}</th>
+                <th className="grey-table">{items.total_cost.toFixed(2)}</th>
                 <th
                   className="blue-table pointer"
                   onClick={() => handleDelete(items.id)}
